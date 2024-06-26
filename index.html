@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <h1 id="hello">안녕하세요</h1> -->
+    <!-- <div class="alert-box" id="alert">알럿창<button onclick="displayFunction('none')">닫기</button></div>
+    
+    <button onclick="displayFunction('block')">버튼</button>
+     -->
+    <button onclick="displayFunction('block','id')">버튼 1</button>
+    <button onclick="displayFunction('block','password')">버튼 2</button>
+    <div class="alert-box" id="alert">
+        <p id="text"></p>
+        <button id="close">닫기</button>
+        <!-- <button id="close"onclick="displayFunction('none','')">닫기</button> -->
+    </div>
+    
+    <!-- <script src="script.js"></script> -->
+     <script>
+        function displayFunction(display,text){
+            document.getElementById('alert').style.display=display;
+            document.getElementById('text').innerHTML=text;
+        }
+        document.getElementById('close').addEventListener('click',function(){
+            document.getElementById('alert').style.display='none';
+
+        })
+     </script>
+</body>
+</html>
